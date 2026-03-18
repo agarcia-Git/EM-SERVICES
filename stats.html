@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Statistiques</title>
+</head>
+<body>
+    <div class="container">
+        <a href="tasks.html" class="back-link">← Retour à la liste</a>
+        <h1>📊 Statistiques</h1>
+
+        <div class="stats-grid">
+            <div class="stat-card stat-total">
+                <div class="stat-number" id="stat-total">—</div>
+                <div class="stat-label">Tâches totales</div>
+            </div>
+            <div class="stat-card stat-done">
+                <div class="stat-number" id="stat-done">—</div>
+                <div class="stat-label">Tâches terminées</div>
+            </div>
+            <div class="stat-card stat-todo">
+                <div class="stat-number" id="stat-todo">—</div>
+                <div class="stat-label">Tâches à faire</div>
+            </div>
+        </div>
+
+        <div class="progress-section">
+            <div class="progress-header">
+                <span>Progression globale</span>
+                <span id="progress-pct">0%</span>
+            </div>
+            <div class="progress-bar-bg">
+                <div class="progress-bar-fill" id="progress-bar"></div>
+            </div>
+        </div>
+
+        <div class="recent-section">
+            <h2>Dernières tâches ajoutées</h2>
+            <ul id="recent-list"></ul>
+        </div>
+    </div>
+    <script src="stats.js"></script>
+</body>
+</html>
