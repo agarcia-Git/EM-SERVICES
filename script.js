@@ -1,6 +1,6 @@
 // Fonction pour récupérer les tâches
 function getTasks() {
-    ffetch('https://totolist-backend.vercel.app/todos')
+    fetch('https://totolist-backend.vercel.app/todos')
         .then(response => {
             if (!response.ok) throw new Error('Erreur de réseau : ' + response.status);
             return response.json();
