@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Récupère et affiche les détails de la tâche
     function getTaskDetails(taskId) {
-        fetch(`http://localhost:3000/todos/${taskId}`)
+        fetch(`https://totolist-backend.vercel.app/${taskId}`)
             .then(response => {
                 if (!response.ok) throw new Error('Tâche introuvable');
                 return response.json();
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const btnComplete = document.getElementById('mark-complete');
     if (btnComplete) {
         btnComplete.addEventListener('click', function () {
-            fetch(`http://localhost:3000/todos/${taskId}`, {
+            fetch(`https://totolist-backend.vercel.app/${taskId}`, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ is_complete: true })
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const btnReopen = document.getElementById('reopen');
     if (btnReopen) {
         btnReopen.addEventListener('click', function () {
-            fetch(`http://localhost:3000/todos/${taskId}`, {
+            fetch(`https://totolist-backend.vercel.app/${taskId}`, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ is_complete: false })
@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (btnDelete) {
         btnDelete.addEventListener('click', function () {
             if (!confirm('Supprimer cette tâche ?')) return;
-            fetch(`http://localhost:3000/todos/${taskId}`, {
+            fetch(`https://totolist-backend.vercel.app/${taskId}`, {
                 method: 'DELETE'
             })
             .then(() => window.location.href = 'tasks.html')

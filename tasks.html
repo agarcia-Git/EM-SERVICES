@@ -12,8 +12,20 @@
             <h1>📋 Liste des tâches</h1>
             <a href="stats.html" class="btn btn-secondary">📊 Statistiques</a>
         </div>
+
         <ul id="taskList"></ul>
         <button onclick="getTasks()" class="btn btn-primary">Charger les tâches</button>
+
+        <!-- Formulaire ajout de tâche -->
+        <div class="add-task-box">
+            <h2>➕ Ajouter une tâche</h2>
+            <div class="form-row">
+                <input type="text" id="newTaskText" placeholder="Titre de la tâche *" />
+                <input type="text" id="newTaskTags" placeholder="Tags (ex: Dev, Design)" />
+                <button onclick="addTask()" class="btn btn-primary">Ajouter</button>
+            </div>
+            <p id="addTaskError" class="error"></p>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>

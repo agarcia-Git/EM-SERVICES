@@ -360,3 +360,27 @@ form button:hover { opacity: .88; transform: translateY(-1px); }
     .stats-grid { grid-template-columns: 1fr 1fr; }
     .stat-card:last-child { grid-column: span 2; }
 }
+
+/* ── Formulaire ajout de tâche ── */
+.add-task-box {
+    margin-top: 28px;
+    background: #f8f9ff;
+    border: 1px dashed #c5cae9;
+    border-radius: 12px;
+    padding: 24px;
+}
+
+.add-task-box h2 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #667eea;
+    margin-bottom: 16px;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
