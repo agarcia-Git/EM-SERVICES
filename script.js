@@ -1,6 +1,6 @@
 // Fonction pour récupérer les tâches
 function getTasks() {
-    fetch('https://totolist-backend.vercel.app/')
+    ffetch('https://totolist-backend.vercel.app/todos')
         .then(response => {
             if (!response.ok) throw new Error('Erreur de réseau : ' + response.status);
             return response.json();
@@ -59,7 +59,7 @@ function addTask() {
         is_complete: false
     };
 
-    fetch('https://totolist-backend.vercel.app/', {
+    fetch('https://totolist-backend.vercel.app/todos', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(newTask)

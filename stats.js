@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    fetch('https://totolist-backend.vercel.app/')
+    fetch('https://totolist-backend.vercel.app/todos')
         .then(response => {
             if (!response.ok) throw new Error('Erreur réseau');
             return response.json();
